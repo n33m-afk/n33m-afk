@@ -690,4 +690,4 @@ class CanvasUI{
 	}
 }
 
-import { CanvasUI };
+export { CanvasUI };
