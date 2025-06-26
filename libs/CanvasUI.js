@@ -690,4 +690,4 @@ class CanvasUI{
 	}
 }
 
-export { App };
+export { CanvasUI };
