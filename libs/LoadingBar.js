@@ -9,23 +9,34 @@ class LoadingBar {
 		this.domElement.style.background = '#000';
 		this.domElement.style.opacity = '0.7';
 		this.domElement.style.display = 'flex';
+		this.domElement.style.flexDirection = 'column';
 		this.domElement.style.alignItems = 'center';
 		this.domElement.style.justifyContent = 'center';
 		this.domElement.style.zIndex = '1111';
 
+		// Loading text
+		const loadingText = document.createElement("div");
+		loadingText.innerText = "Loading...";
+		loadingText.style.color = '#fff';
+		loadingText.style.fontSize = '18px';
+		loadingText.style.marginBottom = '20px';
+		this.domElement.appendChild(loadingText);
+
+		// Bar container
 		const barBase = document.createElement("div");
 		barBase.style.background = '#aaa';
 		barBase.style.width = '50%';
 		barBase.style.minWidth = '250px';
-		barBase.style.borderRadius = '10px';
 		barBase.style.height = '15px';
+		barBase.style.borderRadius = '0'; // Rectangle shape
 		this.domElement.appendChild(barBase);
 
+		// Progress bar
 		const bar = document.createElement("div");
-		bar.style.background = '#800080'; // Purple color
+		bar.style.background = '#800080'; // Purple
 		bar.style.width = '0';
-		bar.style.borderRadius = '10px';
 		bar.style.height = '100%';
+		bar.style.borderRadius = '0'; // Rectangle shape
 		barBase.appendChild(bar);
 
 		this.progressBar = bar;
