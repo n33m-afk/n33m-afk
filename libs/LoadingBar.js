@@ -6,7 +6,7 @@ class LoadingBar {
 		this.domElement.style.left = '0';
 		this.domElement.style.width = '100%';
 		this.domElement.style.height = '100%';
-		this.domElement.style.background = 'rgba(0, 0, 0, 0.7)'; // semi-transparent background
+		this.domElement.style.background = 'rgba(255, 165, 0, 0.7)'; // orange with 70% opacitybackground
 		this.domElement.style.display = 'flex';
 		this.domElement.style.flexDirection = 'column';
 		this.domElement.style.alignItems = 'center';
