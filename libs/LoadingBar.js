@@ -6,8 +6,7 @@ class LoadingBar {
 		this.domElement.style.left = '0';
 		this.domElement.style.width = '100%';
 		this.domElement.style.height = '100%';
-		this.domElement.style.background = '#000';
-		this.domElement.style.opacity = '0.7';
+		this.domElement.style.background = 'rgba(0, 0, 0, 0.7)'; // semi-transparent background
 		this.domElement.style.display = 'flex';
 		this.domElement.style.flexDirection = 'column';
 		this.domElement.style.alignItems = 'center';
@@ -17,8 +16,9 @@ class LoadingBar {
 		// Loading text
 		const loadingText = document.createElement("div");
 		loadingText.innerText = "Loading...";
-		loadingText.style.color = '#fff';
+		loadingText.style.color = '#ffffff'; // white text
 		loadingText.style.fontSize = '18px';
+		loadingText.style.fontWeight = 'bold';
 		loadingText.style.marginBottom = '20px';
 		this.domElement.appendChild(loadingText);
 
@@ -28,15 +28,15 @@ class LoadingBar {
 		barBase.style.width = '50%';
 		barBase.style.minWidth = '250px';
 		barBase.style.height = '15px';
-		barBase.style.borderRadius = '0'; // Rectangle shape
+		barBase.style.borderRadius = '0';
 		this.domElement.appendChild(barBase);
 
 		// Progress bar
 		const bar = document.createElement("div");
-		bar.style.background = '#800080'; // Purple
+		bar.style.background = '#800080';
 		bar.style.width = '0';
 		bar.style.height = '100%';
-		bar.style.borderRadius = '0'; // Rectangle shape
+		bar.style.borderRadius = '0';
 		barBase.appendChild(bar);
 
 		this.progressBar = bar;
